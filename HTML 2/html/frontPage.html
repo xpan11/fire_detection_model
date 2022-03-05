@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+.videotesting{
+    background-image: url(../resources/image/blue.png);
+    
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">Real-Time Flame Detection and Public Fire Prevention System</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#menu" class="w3-bar-item w3-button">Our features</a>
+      <a href="#contact" class="w3-bar-item w3-button">Sign up</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="../resources/image/2.PNG"  width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge">Welcome to Flame Detection! All we care about is your safety.
+</h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+    <img src="../resources/image/about1.png" class="w3-round w3-image"  width="600" height="750">
+    </div>
+
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">About Our System</h1><br>
+      
+      <p class="w3-large">The Flame Detection and Public Fire Prevention System uses the image recgnition and 
+            YoloV5 machine learning technology to detect flames in videos or pictures dynamically. 
+          
+        It is intended to detect fire that can be potentially spread quickly without early detection
+        
+        and give safety authorities golden time to take immediate
+        
+        and appropriate actions to minimize harm to the community.</p>
+      <p class="w3-large w3-text-grey w3-hide-medium"></p>
+    </div> 
+
+  
+  <hr>
+  
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="menu">
+
+
+    <div class="w3-row w3-padding-64" id="about">
+
+        <img style ="float: left; margin: 0px 15px 15px 0 px;" src= "../resources/image/monitorRoom.png" class="w3-round w3-image" alt="Table Setting" width="600" height="750">
+        <p align="center" class="w3-text-grey">resident network<br>
+            We created a network with residents' information, such as location, phone number, email. Our system is implemented in 
+            congested areas, including the working environment, public spaces, 
+            and residential areas. We want our system to spot the fire incidents and know the 
+            location of the population affected by the fire. A resident network allows the security guards to
+            notify and evacuate the residents quickly. 
+
+        </p><br>
+
+    </div>
+
+    <div class="w3-row w3-padding-64" id="about">
+        <img style ="float: right; margin: 0px 15px 15px 0 px;" src= "../resources/image/YoloV5.png" class="w3-round w3-image" alt="Table Setting" width="600" height="750">
+        <p align="center" class="w3-text-grey">Core technology<br>
+            Our system's main part is the model training, which is based on the AI object detector model "YoloV5".
+            
+        
+        </p><br>
+    </div>
+
+    <div class="w3-row w3-padding-64" id="about">
+        <img style ="float: left; margin: 0px 15px 15px 0 px;" src= "../resources/image/decision.png" class="w3-round w3-image" alt="Table Setting" width="600" height="750">
+        <p align="center" class="w3-text-grey">Manual Comfirmation <br>
+            This system's primary purpose is to detect severe fire accidents that can threaten the 
+            lives of the residents and damage the properties. Because of the detection algorithm's sensitivity, 
+            the system can also recognize any small flame that can't lead to a public fire accident, such as smoke 
+            from someone smoking a cigarette, cooking, etc. Therefore, to avoid wasting public resources or bring 
+            unnecessary public panic, we implemented the feature where the system will send a notification to the 
+            community securities to confirm the fire manually. They can either choose to confirm or ignore the alarm 
+            by checking the actual situation after receiving the notification.
+
+        </p><br>
+    </div>
+  </div>
+  </div>
+
+  <hr>
+  <!-- video testing-->
+  
+  <div class="videotesting">
+
+    <h6 class="w3-center">For Community Security Guards<br>
+        <button class="w3-button w3-black w3-padding-large w3-margin-bottom"><a href="uploadVideo.html">Click here to test our system</a></button>
+    </h1><br>
+   
+
+   
+
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-64" id="contact">
+    <h1>Resident sign up</h1><br>
+    <form action="login.php" method = "post" target="_blank" onsubmit="return enter()">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="tel" placeholder="Phone number" required name="tel"></p>
+      <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="email"></p>
+      <!-- <p><input class="w3-input w3-padding-16" type="number" placeholder="Residential buildings" required name="location"></p>
+       -->
+       <p>
+            <select name ="resident_building" class ="w3-input w3-padding-16" >
+                <option value ="build A">Building A</option>
+                <option value ="build B">Building B</option>
+                <option value ="build C">Building C</option>
+                <option value ="build D">Building D</option>
+                <option value ="build E">Building E</option>
+                <option value ="build F">Building F</option>
+                <option value ="build G">Building G</option>
+                <option value ="build H">Building H</option>
+            </select>
+
+       </p>
+      <p><button class="w3-button w3-light-grey w3-section" type="submit">Sign up</button></p>
+    </form>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+            background-image:url(bg.png);
+            background-position: center;
+           
+        }
+        .signUp_Form{
+            width: 300px;
+            background: #fff;
+            padding: 20px;
+            margin: 8% auto 0;
+            text-align: center;
+            box-shadow: 0 0 5px 0 rgba(0,0,0,0,3);
+        }
+        .input-box{
+            border-radius:20px;
+            padding:10px;
+            width:90%;
+            margin: 10px 0;
+            border: 1px solid #997;
+            outline:none;
+        }
+        .signUp_Form h1{
+            color: #1c8adb;
+            margin-bottom: 30px;
+        }
+        button{
+            color:#fff;
+            cursor:pointer;
+            border:none;
+            margin:10px 0;
+            font-size:18px;
+            border-radius: 20px;
+            padding:10px;
+            width:100%;
+            outline:none;
+        }
+        .sign-up-button{
+            background-color:#1c8adb;
+        }
+        .Gmail-button{
+            background-color: rgb(85, 122, 170);
+        }
+        
+        .hr{
+            width:80%;
+            margin-top: 20px;
+        }
+        .or{
+            background:rgb(252, 248, 248);
+            width:30px;
+            margin: -20px auto 10px;
+        }
+        img{
+            width:50px;
+        }
+
+    </style>
+    <head>
+        <title>sign up/sign in page</title>
+        <meta charset="UTF-8">
+         <!-- <link rel="stylesheet" href="style.css"> -->
+        <body>
+            <div class = "signUp_Form">
+                <img src="icon.png">
+                <h1> Sign up now</h1>
+
+                
+
+                <form action="login.php" method="post" onsubmit= "return enter()">
+                    <label><input type="email" class="input-box" name = "email" placeholder="Your Email" ></label>
+                    <label><input type ="phone" class="input-box" name="phone" placeholder="your phone number" required></label>
+                    <label><input type ="name" class="input-box" name="name" placeholder="your name" required></label>
+                    <label><input type ="location" class="input-box" name="location" placeholder="your working building" required></label>
+                    <p><span><input type = "checkbox"></span>I agree to the terms of services</p>
+                    <label><input class="submit" type="submit" name="submit" value="submit" /></label>
+                
+                
+                    <hr>
+                
+                    <p class="or">OR</p>
+                    <button type="button" class="Gmail-button">Login with Gmail</button>
+                    <p>Already have an account?<a href="#">Sign in</a> </p>
+                </form>
+
+        
+            
+
+
+
+
+
+            </div>
+        </body>
+    </head> 
+</html>

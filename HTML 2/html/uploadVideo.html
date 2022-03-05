@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>Product testing for security</b></h1>
+  <p>please upload a video <span class="w3-tag">(mp4)</span> from your local device to test out our product </p>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="../resources/image/bgp.png" alt="Nature" style="width:100%; height:300px">
+    <div class="w3-container">
+      <h3><b>Please upload your video here</b></h3>
+      
+    </div>
+
+    <div class="w3-container">
+       <video width="320" height="240" src="" id="video0" controls="controls" ></video>
+
+        <input class="form-control" type="file" style="height:auto;" id="video" name="video" />
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script>
+            // hTML5实现表单内的上传文件框，上传前预览视频，刷新预览video，使用HTML5 的File API,
+            // 建立一个可存取到该file的url，一个空的video标签，ID为video0,把选择的文件显示在video标签中，实现视频预览功能。
+            // 需要选择支持HTML API的浏览器。
+            $("#video").change(function () {
+                var objUrl = getObjectURL(this.files[0]);
+                console.log("objUrl = " + objUrl);
+                if (objUrl) {
+                    $("#video0").attr("src", objUrl);
+                }
+            });
+            //建立一个可存取到该file的url
+            function getObjectURL(file) {
+                var url = null;
+                if (window.createObjectURL != undefined) { // basic
+                    url = window.createObjectURL(file);
+                } else if (window.URL != undefined) { // mozilla(firefox)
+                    url = window.URL.createObjectURL(file);
+                } else if (window.webkitURL != undefined) { // webkit or chrome
+                    url = window.webkitURL.createObjectURL(file);
+                }
+                return url;
+            }
+        </script></p>
+      <div class="w3-row">
+        
+        
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white w3-opacity-min">
+  <img src="../resources/image/grey1.png"  style="width:100%; height:300px">
+    <div class="w3-container">
+      <h3><b>Display detected video</b></h3>
+     
+    </div>
+
+    <div class="w3-container">
+        <video width="320" height="240" src="" id="video0" controls="controls" ></video>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><a href = "https://blog.roboflow.com/yolov5-improvements-and-evaluation/"> <b>READ MORE »</b></button></p>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+  <img src="../resources/image/grey.jpg" style="width:100%; height:50px">
+    <div class="w3-container w3-white">
+           
+
+    </div>
+  </div><hr>
+  
+  <!-- Posts -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>project logic flow</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="../resources/image/uploadVideo.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Upload video</span><br>
+        <span>select a video to upload from local devices</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="../resources/image/YoloV5.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Video analysis</span><br>
+        <span>YoloV5 will detect the flame from the input</span>
+      </li> 
+      <li class="w3-padding-16">
+        <img src="../resources/image/alertSecurity.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Alert security for manual comfirmation</span><br>
+        <span>Security can comfirm or ignore the alarm</span>
+      </li>   
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+        <img src="../resources/image/sendAlert.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Detected fire</span><br>
+        <span>Security sends notifications to residents and alert safety department</span>
+      </li>  
+    </ul>
+  </div>
+  <hr> 
+ 
+  <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Our technologies</h4>
+    </div>
+    <div class="w3-container w3-white">
+    <p><span class="w3-tag w3-black w3-margin-bottom">YoloV5</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Deep machine learning</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Model building and training</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Communication network</span> 
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Immediate response</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Image recgnition</span> 
+       
+    </p>
+    </div>
+  </div>
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <button class="w3-button w3-black w3-padding-large w3-margin-bottom"><a href="frontPage.html">Back to main page</a></button>
+ 
+  
+</footer>
+
+</body>
+</html>
