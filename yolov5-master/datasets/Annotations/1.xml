@@ -1,0 +1,26 @@
+<annotation>
+	<folder>1</folder>
+	<filename>1.jpg</filename>
+	<path>D:\Yolo\yolov5-master\yolov5-master\datasets\dataset\Fire-Detection\1\1.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>852</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>fire</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>377</xmin>
+			<ymin>140</ymin>
+			<xmax>593</xmax>
+			<ymax>216</ymax>
+		</bndbox>
+	</object>
+</annotation>
